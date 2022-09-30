@@ -1,7 +1,7 @@
 {
-  "main.css": "/static/css/main.e7b90f12.chunk.css",
-  "main.js": "/static/js/main.65c844b6.chunk.js",
-  "main.js.map": "/static/js/main.65c844b6.chunk.js.map",
+  "main.css": "/static/css/main.4418b75c.chunk.css",
+  "main.js": "/static/js/main.d02d84a1.chunk.js",
+  "main.js.map": "/static/js/main.d02d84a1.chunk.js.map",
   "static/js/1.bb0898e8.chunk.js": "/static/js/1.bb0898e8.chunk.js",
   "static/js/1.bb0898e8.chunk.js.map": "/static/js/1.bb0898e8.chunk.js.map",
   "static/css/2.03962285.chunk.css": "/static/css/2.03962285.chunk.css",
@@ -13,8 +13,8 @@
   "static/media/dictionary-app.png": "/static/media/dictionary-app.5021c8fb.png",
   "static/media/mobile-dictionary.mp4": "/static/media/mobile-dictionary.a7e1ff93.mp4",
   "static/css/2.03962285.chunk.css.map": "/static/css/2.03962285.chunk.css.map",
-  "static/css/main.e7b90f12.chunk.css.map": "/static/css/main.e7b90f12.chunk.css.map",
+  "static/css/main.4418b75c.chunk.css.map": "/static/css/main.4418b75c.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.25b2aa04439b04b2e08deeb5d90cd911.js": "/precache-manifest.25b2aa04439b04b2e08deeb5d90cd911.js",
+  "precache-manifest.14b348d73b3bb057828fdbb781b5a5f0.js": "/precache-manifest.14b348d73b3bb057828fdbb781b5a5f0.js",
   "service-worker.js": "/service-worker.js"
 }
