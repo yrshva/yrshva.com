@@ -1,0 +1,12 @@
+.social-networks a {
+  font-size: 24px;
+  color: #fff703;
+}
+
+.social-networks a:hover {
+  color: yellow;
+}
+
+footer {
+  background-color: #479dff;
+}/*# sourceMappingURL=footer.css.map */

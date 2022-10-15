@@ -1,0 +1,28 @@
+.cv-wrapper {
+  padding: 20px;
+}
+.about-page {
+  flex-direction: column;
+}
+.contact-page {
+  form {
+    text-align: start;
+    input,
+    textarea {
+      display: block;
+      border-radius: 3px;
+      border: none;
+      padding: 3px 10px;
+      outline: none;
+      width: 300px;
+      margin: 5px 0;
+    }
+    input[type="submit"] {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .message {
+      height: 100px;
+    }
+  }
+}
