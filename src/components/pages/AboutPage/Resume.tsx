@@ -5,15 +5,11 @@ const Resume = () => {
   return (
     <div className="cv">
       <div className="c21">
-        <p className="c4 title" id="h.5rf9wr4r3no2">
+        <p className="c4 title" >
           <span>Anastasiia Yershova</span>
         </p>
         <p className="c2">
           <span className="c12">Todmorden, UK</span>
-        </p>
-        <p className="c2">
-          <span className="c15 c22">Phone n</span>
-          <span className="c12">&nbsp;+447342931019</span>
         </p>
         <p className="c2">
           <span className="c15 c22">Email</span>
@@ -55,12 +51,12 @@ const Resume = () => {
           <span>
             Front-end Developer with 1 year commercial experience in web
             development and a background in UI/UX Design, and &nbsp;a 3 years
-            university background of basic PHP, JS, HTML, CSS. Excellent in
+            university background of PHP, JS, HTML, CSS. Excellent in
             dealing with payment gateway integrations and other billing matters
-            since I have a 3 years experience of billing management.
+            since I've got 3 years experience of billing management.
           </span>
         </p>
-        <h1 className="c19 c18" id="h.628phil8unj9">
+        <h1 className="c19 c18" >
           <span className="c25 c22">Skills</span>
         </h1>
         <ul className="c11 lst-kix_cigb9kkcnmxx-0 start">
@@ -68,16 +64,13 @@ const Resume = () => {
             <span className="c7">React.js, React Native, Redux</span>
           </li>
           <li className="c16 li-bullet-0">
-            <span className="c7">JavaScript, Typescript</span>
+            <span className="c7">JavaScript, TypeScript</span>
           </li>
           <li className="c16 li-bullet-0">
-            <span className="c7">REST API</span>
-          </li>
-          <li className="c16 li-bullet-0">
-            <span className="c7">Git</span>
+            <span className="c7">REST API, Git</span>
           </li>
           <li className="c16 c18 li-bullet-0">
-            <span className="c7">Bootstrap</span>
+            <span className="c7">Bootstrap, Chakra UI, Material UI</span>
           </li>
           <li className="c16 c18 li-bullet-0">
             <span className="c7">HTML, CSS, SCSS</span>
@@ -91,14 +84,49 @@ const Resume = () => {
             <span>Payment gateways API research and integration</span>
           </li>
         </ul>
-        <h1 className="c18 c19" id="h.k8ysck8q9mgf">
+        <h1 className="c18 c19" >
           <span className="c22 c25">Experience</span>
         </h1>
-        <h2 className="c8" id="h.z67c5lltuhhj">
+        <h2 className="c8" >
+          <span>October</span>
+          <span className="c1">&nbsp; 2022 - Present</span>
+        </h2>
+        <h3 className="c0" >
+          <span>Interactive Investor</span>
+          <span className="c23">- </span>
+          <span className="c6">App Developer</span>
+        </h3>
+        <ul className="c11 lst-kix_iqzifbczfjv5-0 start">
+          <li className="c9 li-bullet-1">
+            <span>
+              &nbsp;Building high-quality web, mobile-web and mobile-native UIs for customer and internal facing users using React and/or React Native, JavaScript, and TypeScript.
+            </span>
+          </li>
+        </ul>
+        <h2 className="c8" >
           <span>August</span>
           <span className="c1">&nbsp; 2021 - Present</span>
         </h2>
-        <h3 className="c0" id="h.rbh2hs1ha1lj">
+        <h3 className="c0" >
+          <span>Freelance </span>
+          <span className="c23">- </span>
+          <span className="c6">Web Developer, UI/UX Designer</span>
+        </h3>
+        <ul className="c11 lst-kix_iqzifbczfjv5-0 start">
+          <li className="c9 li-bullet-1">
+            <span>
+              &nbsp;Designed and developed several successful business products.
+            </span>
+          </li>
+        </ul>
+        <h2 className="c8" >
+          <span>April &nbsp;2022 - August 2022</span>
+        </h2>
+        <h2 className="c8" >
+          <span>August</span>
+          <span className="c1">&nbsp; 2021 - Present</span>
+        </h2>
+        <h3 className="c0" >
           <span>Freelance </span>
           <span className="c23">- </span>
           <span className="c6">Web Developer and UI/UX Designer</span>
@@ -110,10 +138,10 @@ const Resume = () => {
             </span>
           </li>
         </ul>
-        <h2 className="c8" id="h.arnrh62rcfpt">
+        <h2 className="c8" >
           <span>April &nbsp;2022 - August 2022</span>
         </h2>
-        <h3 className="c0" id="h.mofu6vopi18q">
+        <h3 className="c0" >
           <span>Avanta</span>
           <span>, Kyiv</span>
           <span className="c6">
@@ -128,10 +156,10 @@ const Resume = () => {
             </span>
           </li>
         </ul>
-        <h2 className="c8" id="h.8p24tzp33ejg">
+        <h2 className="c8" >
           <span className="c1">November &nbsp;2021 - April 2022</span>
         </h2>
-        <h3 className="c0" id="h.2mwrupb75gpr">
+        <h3 className="c0" >
           <span>Bistox Holding OU, Kyiv</span>
           <span className="c6">&nbsp;- Billing Manager</span>
         </h3>
@@ -147,10 +175,10 @@ const Resume = () => {
             </span>
           </li>
         </ul>
-        <h2 className="c8" id="h.ofqvm11ssz2i">
+        <h2 className="c8" >
           <span>September &nbsp;2019 &nbsp;- October 2021</span>
         </h2>
-        <h3 className="c0" id="h.klvjjwvj40i3">
+        <h3 className="c0" >
           <span>BI-Online Solutions</span>
           <span>, Kyiv</span>
           <span className="c6">&nbsp;- Billing Manager</span>
@@ -163,14 +191,14 @@ const Resume = () => {
             </span>
           </li>
         </ul>
-        <h1 className="c19 c18" id="h.6oztx7omgpqo">
+        <h1 className="c19 c18" >
           <span className="c25 c22">Education</span>
         </h1>
-        <h2 className="c8" id="h.v9j91n2fon3f">
+        <h2 className="c8" >
           <span>September</span>
           <span className="c1">&nbsp; 2017 - February 2020</span>
         </h2>
-        <h3 className="c0" id="h.78rlvk1sif5a">
+        <h3 className="c0" >
           <span>Igor Sikorsky Kyiv Polytechnic Institute</span>
           <span>, Kyiv</span>
           <span className="c17">
