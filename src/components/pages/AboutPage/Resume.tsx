@@ -5,7 +5,7 @@ const Resume = () => {
   return (
     <div className="cv">
       <div className="c21">
-        <p className="c4 title" >
+        <p className="c4 title">
           <span>Anastasiia Yershova</span>
         </p>
         <p className="c2">
@@ -51,12 +51,12 @@ const Resume = () => {
           <span>
             Front-end Developer with 1 year commercial experience in web
             development and a background in UI/UX Design, and &nbsp;a 3 years
-            university background of PHP, JS, HTML, CSS. Excellent in
-            dealing with payment gateway integrations and other billing matters
-            since I've got 3 years experience of billing management.
+            university background of PHP, JS, HTML, CSS. Excellent in dealing
+            with payment gateway integrations and other billing matters since
+            I've got 3 years experience of billing management.
           </span>
         </p>
-        <h1 className="c19 c18" >
+        <h1 className="c19 c18">
           <span className="c25 c22">Skills</span>
         </h1>
         <ul className="c11 lst-kix_cigb9kkcnmxx-0 start">
@@ -84,14 +84,14 @@ const Resume = () => {
             <span>Payment gateways API research and integration</span>
           </li>
         </ul>
-        <h1 className="c18 c19" >
+        <h1 className="c18 c19">
           <span className="c22 c25">Experience</span>
         </h1>
-        <h2 className="c8" >
+        <h2 className="c8">
           <span>October</span>
           <span className="c1">&nbsp; 2022 - Present</span>
         </h2>
-        <h3 className="c0" >
+        <h3 className="c0">
           <span>Interactive Investor</span>
           <span className="c23">- </span>
           <span className="c6">App Developer</span>
@@ -99,34 +99,20 @@ const Resume = () => {
         <ul className="c11 lst-kix_iqzifbczfjv5-0 start">
           <li className="c9 li-bullet-1">
             <span>
-              &nbsp;Building high-quality web, mobile-web and mobile-native UIs for customer and internal facing users using React and/or React Native, JavaScript, and TypeScript.
+              &nbsp;Building high-quality web, mobile-web and mobile-native UIs
+              for customer and internal facing users using React and/or React
+              Native, JavaScript, and TypeScript.
             </span>
           </li>
         </ul>
-        <h2 className="c8" >
-          <span>August</span>
-          <span className="c1">&nbsp; 2021 - Present</span>
-        </h2>
-        <h3 className="c0" >
-          <span>Freelance </span>
-          <span className="c23">- </span>
-          <span className="c6">Web Developer, UI/UX Designer</span>
-        </h3>
-        <ul className="c11 lst-kix_iqzifbczfjv5-0 start">
-          <li className="c9 li-bullet-1">
-            <span>
-              &nbsp;Designed and developed several successful business products.
-            </span>
-          </li>
-        </ul>
-        <h2 className="c8" >
+        <h2 className="c8">
           <span>April &nbsp;2022 - August 2022</span>
         </h2>
-        <h2 className="c8" >
+        <h2 className="c8">
           <span>August</span>
           <span className="c1">&nbsp; 2021 - Present</span>
         </h2>
-        <h3 className="c0" >
+        <h3 className="c0">
           <span>Freelance </span>
           <span className="c23">- </span>
           <span className="c6">Web Developer and UI/UX Designer</span>
@@ -138,10 +124,10 @@ const Resume = () => {
             </span>
           </li>
         </ul>
-        <h2 className="c8" >
+        <h2 className="c8">
           <span>April &nbsp;2022 - August 2022</span>
         </h2>
-        <h3 className="c0" >
+        <h3 className="c0">
           <span>Avanta</span>
           <span>, Kyiv</span>
           <span className="c6">
@@ -156,10 +142,10 @@ const Resume = () => {
             </span>
           </li>
         </ul>
-        <h2 className="c8" >
+        <h2 className="c8">
           <span className="c1">November &nbsp;2021 - April 2022</span>
         </h2>
-        <h3 className="c0" >
+        <h3 className="c0">
           <span>Bistox Holding OU, Kyiv</span>
           <span className="c6">&nbsp;- Billing Manager</span>
         </h3>
@@ -175,10 +161,10 @@ const Resume = () => {
             </span>
           </li>
         </ul>
-        <h2 className="c8" >
+        <h2 className="c8">
           <span>September &nbsp;2019 &nbsp;- October 2021</span>
         </h2>
-        <h3 className="c0" >
+        <h3 className="c0">
           <span>BI-Online Solutions</span>
           <span>, Kyiv</span>
           <span className="c6">&nbsp;- Billing Manager</span>
@@ -191,14 +177,14 @@ const Resume = () => {
             </span>
           </li>
         </ul>
-        <h1 className="c19 c18" >
+        <h1 className="c19 c18">
           <span className="c25 c22">Education</span>
         </h1>
-        <h2 className="c8" >
+        <h2 className="c8">
           <span>September</span>
           <span className="c1">&nbsp; 2017 - February 2020</span>
         </h2>
-        <h3 className="c0" >
+        <h3 className="c0">
           <span>Igor Sikorsky Kyiv Polytechnic Institute</span>
           <span>, Kyiv</span>
           <span className="c17">
