@@ -9,7 +9,7 @@ const Resume = () => {
           <span>Anastasiia Yershova</span>
         </p>
         <p className="c2">
-          <span className="c12">Todmorden, UK</span>
+          <span className="c12">Manchester, UK</span>
         </p>
         <p className="c2">
           <span className="c15 c22">Email</span>
