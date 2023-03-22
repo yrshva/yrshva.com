@@ -3,14 +3,15 @@ import "../../styles/footer.css";
 const Footer = () => {
   return (
     <footer>
-      <div className="container p-3">
+      <div className=" p-3">
         <div className="d-flex justify-content-center">
           <a
             id="email"
             href="mailto:anastasia.yershova@yahoo.com"
             title="Anastasiia's email"
+            style={{ textDecoration: "none", color: "yellow" }}
           >
-            anastasia.yershova@yahoo.com
+            anastasiia.yershova@yahoo.com
           </a>
         </div>
         <div className="social-networks d-flex justify-content-center">
@@ -21,11 +22,9 @@ const Footer = () => {
             <i className="fa-brands fa-linkedin m-3"></i>
           </a>
           <a href="https://t.me/anastasia_yrshv" title="Anastasiia's Telegram">
-            {" "}
             <i className="fa-brands fa-telegram m-3"></i>
           </a>
           <a href="https://github.com/yrshva" title="Anastasiia's Github">
-            {" "}
             <i className="fa-brands fa-github-square m-3"></i>
           </a>
         </div>

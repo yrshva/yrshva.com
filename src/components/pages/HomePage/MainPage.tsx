@@ -1,5 +1,4 @@
-import React, { RefObject } from "react";
-import { useNavigate } from "react-router-dom";
+import { Box, Button, ButtonGroup, Modal, Typography } from "@mui/material";
 import styled, { keyframes } from "styled-components";
 import {
   swing,
@@ -8,7 +7,10 @@ import {
   slideInRight,
   zoomIn,
 } from "react-animations";
-import { HashLink } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
+import React, { RefObject } from "react";
+import { ContactForm } from "../../shared/ContactForm";
+import { buttonStyle } from "../../shared/styles";
 
 const SlideInDown = styled.span`
   display: inline-block;
@@ -35,37 +37,52 @@ const BounceIn = styled.div`
   animation: 1s ${keyframes`${bounceInUp}`};
 `;
 
+
 const MainPage = (props: { projects: RefObject<HTMLDivElement> }) => {
+  const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
-    <div>
-      <div className="page bg-blue">
-        <div>
-          <h2 className="font-weight-300">
+    <Box>
+      <Box className="page bg-blue">
+        <Box>
+          <Typography >
             <HandSwing>👋</HandSwing>
             <SlideInDown>Hi</SlideInDown> <SlideInRight>I am</SlideInRight>
-          </h2>
+          </Typography>
           <Name>Anastasiia Yershova</Name>
-          <h5 className="opacity-75 fw-normal">
+          <Typography sx={{ opacity: "75%" }}>
             <SlideInDown>Frontend Developer based in the UK</SlideInDown>
-          </h5>
+          </Typography>
           <BounceIn className="buttons">
-            <button
-              className="btn-custom btn-projects m-1"
+
+            <Button
               onClick={() =>
                 props.projects.current &&
                 props.projects.current.scrollIntoView()
               }
+              sx={buttonStyle({ color: "yellow" })}
             >
               See my projects
-            </button>
-            <HashLink to="/about#contact" className="btn-contact-me">
-              <div className="btn-custom  btn-contact  m-1 ">Contact me</div>
-            </HashLink>
+            </Button>
+            <Button onClick={handleOpen}
+              sx={buttonStyle({ color: "blue" })}
+            >
+              Contact me
+            </Button>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <ContactForm type="modal" />
+            </Modal>
           </BounceIn>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box >
   );
 };
 export default MainPage;
