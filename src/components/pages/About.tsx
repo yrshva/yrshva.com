@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import Resume from "./AboutPage/Resume";
 import { ContactForm } from "../shared/ContactForm";

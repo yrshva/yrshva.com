@@ -1,13 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import { HashLink } from "react-router-hash-link";
-import "../../styles/header.css";
+import { Box, Button, List, ListItemButton, ListItemText, useMediaQuery } from "@mui/material";
+import { burgerButtonStyles, burgerIconStyles, burgerWrapStyles, fullHeaderStyles, linkStyles } from "../../styles/headerStyles";
 
 const Header = () => {
   const [burgerClicked, setBurgerClicked] = useState<boolean>(false);
   const burger = useRef<HTMLHeadingElement>(null);
   const url = useLocation();
+  const navigate = useNavigate();
+  const isMobile = useMediaQuery('(max-width: 600px)');
   const handleBurgerButtonClick = () => {
     burgerClicked ? setBurgerClicked(false) : setBurgerClicked(true);
   };
@@ -29,45 +32,50 @@ const Header = () => {
     setBurgerClicked(false);
   }, [url]);
 
-  return (
-    <header>
-      <div className="header-wrap">
-        <div className="full-header">
-          <Link to="/" className="logo">
+
+  const HeaderView = () => {
+    if (isMobile) {
+      return <Box className="small-header" ref={burger} display="block">
+        <Box sx={burgerWrapStyles}>
+          <Link to="/" className="logo" style={linkStyles}>
             YRSHVA
           </Link>
-          <div className="full-nav">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <HashLink to="/about#contact">Contact</HashLink>
-          </div>
-        </div>
-      </div>
-      <div className="small-header" ref={burger}>
-        <div className="burger-wrap">
-          <Link to="/" className="logo">
-            YRSHVA
-          </Link>
-          <div className="burger-icon">
-            <button onClick={handleBurgerButtonClick}>
+          <Box sx={burgerIconStyles}>
+            <Button onClick={handleBurgerButtonClick} sx={burgerButtonStyles}>
               <MenuIcon className="fa-plus-circle" sx={{ fontSize: 30 }} />
-            </button>
-          </div>
-        </div>
+            </Button>
+          </Box>
+        </Box>
         {burgerClicked && (
-          <div className="dropdown">
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-            </ul>
-          </div>
+          <Box>
+            <List>
+              <ListItemButton onClick={() => { navigate("/") }}>
+                <ListItemText primary="Home" />
+              </ListItemButton>
+              <ListItemButton onClick={() => { navigate("/about") }} >
+                <ListItemText primary="About" />
+              </ListItemButton>
+            </List>
+          </Box>
         )}
-      </div>
-    </header>
+      </Box>
+    } else return (<Box height="60px" display="flex" justifyContent="center">
+      <Box sx={fullHeaderStyles}>
+        <Link to="/" className="logo" style={linkStyles}>
+          YRSHVA
+        </Link>
+        <Box margin="0 10px">
+          <Link to="/" style={linkStyles}>Home</Link>
+          <Link to="/about" style={linkStyles}>About</Link>
+          <HashLink to="/about#contact" style={linkStyles}>Contact</HashLink>
+        </Box>
+      </Box>
+    </Box>)
+  }
+  return (
+    <Box position="fixed" width="100%" bgcolor="#479dff" zIndex="100" boxShadow="0px 2px 10px 0px rgba(0, 0, 0, 0.1)">
+      <HeaderView />
+    </Box>
   );
 };
 export default Header;

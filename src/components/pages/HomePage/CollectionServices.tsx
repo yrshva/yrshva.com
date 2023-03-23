@@ -1,9 +1,9 @@
-import React, { type RefObject } from "react";
+import React from "react";
 
 const CollectionServices = (props: {
-  previous: RefObject<HTMLDivElement>;
-  current: RefObject<HTMLDivElement>;
-  next: RefObject<HTMLDivElement>;
+  previous: React.RefObject<HTMLDivElement>;
+  current: React.RefObject<HTMLDivElement>;
+  next: React.RefObject<HTMLDivElement>;
 }) => {
   return (
     <div>

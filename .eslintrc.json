@@ -20,6 +20,9 @@
         "react"
     ],
     "rules": {
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/consistent-type-imports": "off",
         "@typescript-eslint/explicit-function-return-type": 0,
         "no-multiple-empty-lines": [
             "error",

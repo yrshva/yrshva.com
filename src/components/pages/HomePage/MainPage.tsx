@@ -73,7 +73,7 @@ const MainPage = (props: { projects: RefObject<HTMLDivElement> }) => {
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
             >
-              <ContactForm type="modal" />
+              <ContactForm type="modal" setOpen={setOpen} />
             </Modal>
           </BounceIn>
         </Box>

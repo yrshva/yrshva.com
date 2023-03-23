@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React, { type RefObject } from "react";
 
 const WeatherApp = (props: {
@@ -5,11 +6,11 @@ const WeatherApp = (props: {
   next: RefObject<HTMLDivElement>;
 }) => {
   return (
-    <div>
-      <div ref={props.current} className="page bg-yellow">
-        <div>
-          <div className="project">
-            <div className="project-info">
+    <Box>
+      <Box ref={props.current} className="page bg-yellow">
+        <Box>
+          <Box className="project">
+            <Box className="project-info">
               <h3>Weather Application</h3>
               <p>
                 The designed product shows real-time weather forecast in over
@@ -24,14 +25,14 @@ const WeatherApp = (props: {
                 </a>{" "}
                 to see how it works.
               </p>
-            </div>
+            </Box>
             <img
               src={require("../../../images/weather-app.png")}
               alt="weather application screenshot"
               className="project-screenshot"
             />
-          </div>
-          <div className="mt-3">
+          </Box>
+          <Box className="mt-3">
             <button
               className="btn-custom btn-blue"
               onClick={() => { props.next.current?.scrollIntoView(); }
@@ -39,10 +40,10 @@ const WeatherApp = (props: {
             >
               Next
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 export default WeatherApp;
