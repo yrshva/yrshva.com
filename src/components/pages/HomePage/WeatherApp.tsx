@@ -1,4 +1,4 @@
-import React, { RefObject } from "react";
+import React, { type RefObject } from "react";
 
 const WeatherApp = (props: {
   current: RefObject<HTMLDivElement>;
@@ -34,8 +34,7 @@ const WeatherApp = (props: {
           <div className="mt-3">
             <button
               className="btn-custom btn-blue"
-              onClick={() =>
-                props.next.current && props.next.current.scrollIntoView()
+              onClick={() => { props.next.current?.scrollIntoView(); }
               }
             >
               Next

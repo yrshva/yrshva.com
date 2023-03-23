@@ -1,4 +1,4 @@
-import React, { RefObject } from "react";
+import React, { type RefObject } from "react";
 
 const CollectionServices = (props: {
   previous: RefObject<HTMLDivElement>;
@@ -32,17 +32,14 @@ const CollectionServices = (props: {
           <div className="mt-3">
             <button
               className="btn-custom btn-blue m-2"
-              onClick={() =>
-                props.previous.current &&
-                props.previous.current.scrollIntoView()
+              onClick={() => { props.previous.current?.scrollIntoView(); }
               }
             >
               Previous
             </button>
             <button
               className="btn-custom btn-yellow m-2"
-              onClick={() =>
-                props.next.current && props.next.current.scrollIntoView()
+              onClick={() => { props.next.current?.scrollIntoView(); }
               }
             >
               Next

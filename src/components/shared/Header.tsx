@@ -14,7 +14,7 @@ const Header = () => {
   useEffect(() => {
     const handleClickOutside = (event: Event) => {
       if (
-        burger.current &&
+        (burger.current != null) &&
         !burger.current.contains(event.target as HTMLInputElement)
       ) {
         setBurgerClicked(false);

@@ -53,7 +53,7 @@ const Resume = () => {
             development and a background in UI/UX Design, and &nbsp;a 3 years
             university background of PHP, JS, HTML, CSS. Excellent in dealing
             with payment gateway integrations and other billing matters since
-            I've got 3 years experience of billing management.
+            I`ve got 3 years experience of billing management.
           </span>
         </p>
         <h1 className="c19 c18">

@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Modal, Typography } from "@mui/material";
+import { Box, Button, Modal, Typography } from "@mui/material";
 import styled, { keyframes } from "styled-components";
 import {
   swing,
@@ -7,8 +7,7 @@ import {
   slideInRight,
   zoomIn,
 } from "react-animations";
-import { useNavigate } from "react-router-dom";
-import React, { RefObject } from "react";
+import React, { type RefObject } from "react";
 import { ContactForm } from "../../shared/ContactForm";
 import { buttonStyle } from "../../shared/styles";
 
@@ -40,9 +39,8 @@ const BounceIn = styled.div`
 
 const MainPage = (props: { projects: RefObject<HTMLDivElement> }) => {
   const [open, setOpen] = React.useState(false);
-  const navigate = useNavigate();
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => { setOpen(true); };
+  const handleClose = () => { setOpen(false); };
   return (
     <Box>
       <Box className="page bg-blue">
@@ -58,9 +56,7 @@ const MainPage = (props: { projects: RefObject<HTMLDivElement> }) => {
           <BounceIn className="buttons">
 
             <Button
-              onClick={() =>
-                props.projects.current &&
-                props.projects.current.scrollIntoView()
+              onClick={() => { props.projects.current?.scrollIntoView(); }
               }
               sx={buttonStyle({ color: "yellow" })}
             >

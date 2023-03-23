@@ -27,8 +27,8 @@ const handleSubmit = (event: { target: any; preventDefault: () => void }) => {
       event.target,
       "wNuFFCZm6_kMdUYKP"
     )
-    .then(() => alert("Thank you! I will be in touch with you soon."))
-    .catch((error) => alert(JSON.stringify(error)));
+    .then(() => { alert("Thank you! I will be in touch with you soon."); })
+    .catch((error) => { alert(JSON.stringify(error)); });
 };
 
 export const ContactForm = ({ type }: { type: "modal" | "block" }) => (

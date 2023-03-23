@@ -1,4 +1,4 @@
-import React, { RefObject } from "react";
+import React, { type RefObject } from "react";
 
 const DictionaryApp = (props: {
   previous: RefObject<HTMLDivElement>;
@@ -13,8 +13,8 @@ const DictionaryApp = (props: {
             <div className="project-info">
               <h3>Dictionary Application</h3>
               <p>
-                You can search for any word's definition and listen to the
-                word's pronuncuation with the Dictionary Application. This
+                You can search for any word`s definition and listen to the
+                word`s pronuncuation with the Dictionary Application. This
                 product was developed in React using REST API, React Hooks,
                 Bootstrap. See the{" "}
                 <a href="https://github.com/yrshva/dictionary-app">
@@ -33,17 +33,16 @@ const DictionaryApp = (props: {
           <div className="mt-3">
             <button
               className="btn-custom btn-blue m-2"
-              onClick={() =>
-                props.previous.current &&
-                props.previous.current.scrollIntoView()
+              onClick={() => {
+                props.previous.current?.scrollIntoView();
+              }
               }
             >
               Previous
             </button>
             <button
               className="btn-custom btn-yellow m-2"
-              onClick={() =>
-                props.next.current && props.next.current.scrollIntoView()
+              onClick={() => { props.next.current?.scrollIntoView(); }
               }
             >
               Next
