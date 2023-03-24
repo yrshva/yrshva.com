@@ -18,13 +18,14 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/in/anastasiia-yershova/"
             title="Anastasiia's LinkedIn"
+            target="blank"
           >
             <i className="fa-brands fa-linkedin m-3"></i>
           </a>
-          <a href="https://t.me/anastasia_yrshv" title="Anastasiia's Telegram">
+          <a href="https://t.me/yrshva" target="blank" title="Anastasiia's Telegram">
             <i className="fa-brands fa-telegram m-3"></i>
           </a>
-          <a href="https://github.com/yrshva" title="Anastasiia's Github">
+          <a href="https://github.com/yrshva" target="blank" title="Anastasiia's Github">
             <i className="fa-brands fa-github-square m-3"></i>
           </a>
         </div>

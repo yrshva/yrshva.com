@@ -27,7 +27,7 @@ const Resume = () => {
           <span className="c5">
             <a
               className="c10"
-              href="https://www.google.com/url?q=https://www.linkedin.com/in/anastasiia-yershova/&amp;sa=D&amp;source=editors&amp;ust=1664666888256271&amp;usg=AOvVaw0Cf9a63ZLIueQXqap0u2NY"
+              href="https://www.linkedin.com/in/anastasiia-yershova/"
             >
               https://www.linkedin.com/in/anastasiia-yershova/
             </a>
@@ -38,7 +38,7 @@ const Resume = () => {
           <span className="c5">
             <a
               className="c10"
-              href="https://www.google.com/url?q=https://github.com/yrshva&amp;sa=D&amp;source=editors&amp;ust=1664666888256536&amp;usg=AOvVaw1dOBWdupNPW1UmI55lerQI"
+              href="https://github.com/yrshva"
             >
               https://github.com/yrshva
             </a>
@@ -50,7 +50,7 @@ const Resume = () => {
         <p className="c2">
           <span>
             Front-end Developer with 1 year commercial experience in web
-            development and a background in UI/UX Design, and &nbsp;a 3 years
+            development, a background in UI/UX Design, and &nbsp;a 3 years
             university background of PHP, JS, HTML, CSS. Excellent in dealing
             with payment gateway integrations and other billing matters since
             I`ve got 3 years experience of billing management.
@@ -102,25 +102,6 @@ const Resume = () => {
               &nbsp;Building high-quality web, mobile-web and mobile-native UIs
               for customer and internal facing users using React and/or React
               Native, JavaScript, and TypeScript.
-            </span>
-          </li>
-        </ul>
-        <h2 className="c8">
-          <span>April &nbsp;2022 - August 2022</span>
-        </h2>
-        <h2 className="c8">
-          <span>August</span>
-          <span className="c1">&nbsp; 2021 - Present</span>
-        </h2>
-        <h3 className="c0">
-          <span>Freelance </span>
-          <span className="c23">- </span>
-          <span className="c6">Web Developer and UI/UX Designer</span>
-        </h3>
-        <ul className="c11 lst-kix_iqzifbczfjv5-0 start">
-          <li className="c9 li-bullet-1">
-            <span>
-              &nbsp;Designed and developed several successful business products.
             </span>
           </li>
         </ul>
