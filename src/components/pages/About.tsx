@@ -3,6 +3,8 @@ import { useEffect } from "react";
 
 import Resume from "./AboutPage/Resume";
 import { ContactForm } from "../shared/ContactForm";
+import { colors } from "../../styles";
+import { containerStyles } from "../../styles/projectStyles";
 
 const About = () => {
   useEffect(() => {
@@ -11,12 +13,12 @@ const About = () => {
 
   return (
     <>
-      <Box className="page bg-blue about-page">
-        <Box className="cv-wrapper">
+      <Box bgcolor={colors.primary.main}>
+        <Box p="20px" sx={containerStyles}>
           <Resume />
         </Box>
       </Box>
-      <Box className="page bg-yellow contact-page" id="contact">
+      <Box id="contact" bgcolor={colors.secondary.main} sx={containerStyles}>
         <ContactForm type="block" />
       </Box>
     </>

@@ -21,9 +21,10 @@ export const burgerWrapStyles: CSSProperties = {
   backgroundColor: "#479dff",
 };
 export const burgerIconStyles: CSSProperties = {
-  marginTop: "12px",
   lineHeight: "normal",
-  float: "right",
+  position: "absolute",
+  top: "10px",
+  right: "10px",
 };
 export const burgerButtonStyles: CSSProperties = {
   background: "none",

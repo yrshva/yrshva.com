@@ -3,7 +3,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import { Box, Link, Stack } from "@mui/material";
+
 import { colors } from "../../styles";
+
 const Footer = () => {
   const iconStyles = {
     color: colors.secondary.main,

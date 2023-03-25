@@ -4,7 +4,6 @@ import WeatherApp from "./HomePage/WeatherApp";
 import DictionaryApp from "./HomePage/DictionaryApp";
 import CollectionServices from "./HomePage/CollectionServices";
 import MobileDictionary from "./HomePage/MobileDictionary";
-import "../../styles/home.css";
 import TournamentApp from "./HomePage/TournamentApp";
 import ApplicationsApp from "./HomePage/ApplicationsApp";
 

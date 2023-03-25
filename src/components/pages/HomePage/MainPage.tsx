@@ -15,6 +15,7 @@ import {
   buttonStyle,
   colors,
 } from "../../../styles";
+import { containerStyles } from "../../../styles/projectStyles";
 
 const SlideInDown = styled.span`
   display: inline-block;
@@ -51,8 +52,8 @@ const MainPage = (props: { projects: RefObject<HTMLDivElement> }) => {
   };
   return (
     <Box>
-      <Box className="page bg-blue">
-        <Box>
+      <Box sx={containerStyles} bgcolor={colors.primary.main}>
+        <Box marginTop={-10}>
           <Typography fontSize={fontSizes.L} fontFamily={codeFontFamily}>
             <HandSwing>👋</HandSwing>
             <SlideInDown>Hi</SlideInDown> <SlideInRight>I am</SlideInRight>
