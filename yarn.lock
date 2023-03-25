@@ -17839,6 +17839,23 @@ eslint-plugin-react@latest:
   languageName: node
   linkType: hard
 
+"url-loader@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "url-loader@npm:4.1.1"
+  dependencies:
+    loader-utils: ^2.0.0
+    mime-types: ^2.1.27
+    schema-utils: ^3.0.0
+  peerDependencies:
+    file-loader: "*"
+    webpack: ^4.0.0 || ^5.0.0
+  peerDependenciesMeta:
+    file-loader:
+      optional: true
+  checksum: c1122a992c6cff70a7e56dfc2b7474534d48eb40b2cc75467cde0c6972e7597faf8e43acb4f45f93c2473645dfd803bcbc20960b57544dd1e4c96e77f72ba6fd
+  languageName: node
+  linkType: hard
+
 "url-parse@npm:^1.4.3":
   version: 1.5.10
   resolution: "url-parse@npm:1.5.10"
@@ -18940,6 +18957,7 @@ eslint-plugin-react@latest:
     ts-loader: ^9.4.2
     typescript: "*"
     uid: ^2.0.0
+    url-loader: ^4.1.1
     usehooks-ts: ^2.9.1
     web-vitals: ^2.1.4
     webpack: ^5.76.3

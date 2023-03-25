@@ -1,4 +1,7 @@
-import React, { type RefObject } from "react";
+import { Box, Button, Link, Stack, Typography } from "@mui/material";
+import { RefObject } from "react";
+import { buttonStyle } from "../../../styles";
+import ApplicationsAppVideo from "../../../images/applications-app.mp4";
 
 const ApplicationsApp = (props: {
   previous: RefObject<HTMLDivElement>;
@@ -6,50 +9,57 @@ const ApplicationsApp = (props: {
   next: RefObject<HTMLDivElement>;
 }) => {
   return (
-    <div>
-      <div ref={props.current} className="page bg-yellow">
-        <div>
-          <div className="project">
-            <div className="project-info">
-              <h3>Applications Application</h3>
-              <p>
+    <Box>
+      <Box ref={props.current} className="page bg-yellow">
+        <Box>
+          <Box className="project">
+            <Box className="project-info">
+              <Typography>Applications Application</Typography>
+              <Typography>
                 A small application in React + Typescript using REST API,
                 Bootstrap, json-server. The data in the table is loaded from the
                 server. All the fields contain validation, form has appropriate
-                checks before submitting (disable buttons or others) See the{" "}
-                <a href="https://github.com/yrshva/fake-applications">
+                checks before submitting (disable Buttons or others) See the{" "}
+                <Link
+                  href="https://github.com/yrshva/fake-applications"
+                  target="blank"
+                >
                   source code on GitHub
-                </a>
+                </Link>
                 .
-              </p>
-            </div>
+              </Typography>
+            </Box>
             <video className="project-screenshot" controls muted>
-              <source
-                src={require("../../../images/applications-app.mp4")}
-                type="video/mp4"
-              />
+              <source src={ApplicationsAppVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          </div>
-          <div className="mt-3">
-            <button
-              className="btn-custom btn-yellow m-2"
-              onClick={() => { props.previous.current?.scrollIntoView(); }
-              }
+          </Box>
+          <Stack
+            margin={3}
+            direction="row"
+            display="flex"
+            justifyContent="space-evenly"
+          >
+            <Button
+              sx={buttonStyle({ color: "secondary" })}
+              onClick={() => {
+                props.previous.current?.scrollIntoView();
+              }}
             >
               Previous
-            </button>
-            <button
-              className="btn-custom btn-blue m-2"
-              onClick={() => { props.next.current?.scrollIntoView(); }
-              }
+            </Button>
+            <Button
+              sx={buttonStyle({ color: "primary" })}
+              onClick={() => {
+                props.next.current?.scrollIntoView();
+              }}
             >
               Next
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Button>
+          </Stack>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 export default ApplicationsApp;

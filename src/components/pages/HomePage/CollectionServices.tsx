@@ -1,53 +1,52 @@
-import React from "react";
+import { RefObject } from "react";
+import { Box, Button, Link, Stack, Typography } from "@mui/material";
+import { buttonStyle } from "../../../styles";
+import CollectionServicesImage from "../../../images/collection-services.mp4";
 
 const CollectionServices = (props: {
-  previous: React.RefObject<HTMLDivElement>;
-  current: React.RefObject<HTMLDivElement>;
-  next: React.RefObject<HTMLDivElement>;
+  previous: RefObject<HTMLDivElement>;
+  current: RefObject<HTMLDivElement>;
+  next: RefObject<HTMLDivElement>;
 }) => {
   return (
-    <div>
-      <div ref={props.current} className="page bg-blue">
-        <div>
-          <div className="project">
-            <div className="project-info">
-              <h3>Collection Services</h3>
-              <p>
+    <Box>
+      <Box ref={props.current} className="page bg-blue">
+        <Box>
+          <Box className="project">
+            <Box className="project-info">
+              <Typography>Collection Services</Typography>
+              <Typography>
                 The product was designed in Figma and developed in React +
                 Typescript using Bootstrap. For portfolio use only. See it on{" "}
-                <a href="https://www.behance.net/gallery/150263943/German-collection-services/modules/848921161">
+                <Link href="https://www.behance.net/gallery/150263943/German-collection-services/modules/848921161">
                   Behance
-                </a>
+                </Link>
                 .
-              </p>
-            </div>
+              </Typography>
+            </Box>
             <video className="project-screenshot" controls muted>
-              <source
-                src={require("../../../images/collection-services.mp4")}
-                type="video/mp4"
-              />
+              <source src={CollectionServicesImage} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          </div>
-          <div className="mt-3">
-            <button
-              className="btn-custom btn-blue m-2"
-              onClick={() => { props.previous.current?.scrollIntoView(); }
-              }
+          </Box>
+          <Stack
+            margin={3}
+            direction="row"
+            display="flex"
+            justifyContent="space-evenly"
+          >
+            <Button
+              sx={buttonStyle({ color: "secondary" })}
+              onClick={() => {
+                props.previous.current?.scrollIntoView();
+              }}
             >
               Previous
-            </button>
-            <button
-              className="btn-custom btn-yellow m-2"
-              onClick={() => { props.next.current?.scrollIntoView(); }
-              }
-            >
-              Next
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Button>
+          </Stack>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 export default CollectionServices;

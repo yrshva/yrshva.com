@@ -9,7 +9,12 @@ import {
 } from "react-animations";
 import React, { type RefObject } from "react";
 import { ContactForm } from "../../shared/ContactForm";
-import { codeFontFamily, fontSizes, buttonStyle } from "../../../styles";
+import {
+  codeFontFamily,
+  fontSizes,
+  buttonStyle,
+  colors,
+} from "../../../styles";
 
 const SlideInDown = styled.span`
   display: inline-block;
@@ -22,7 +27,7 @@ const SlideInRight = styled.span`
 `;
 
 const Name = styled.h2`
-  color: #fadf63;
+  color: ${colors.secondary.light};
   font-weight: 700;
   animation: 1s ${keyframes`${zoomIn}`};
 `;
@@ -71,11 +76,14 @@ const MainPage = (props: { projects: RefObject<HTMLDivElement> }) => {
                 onClick={() => {
                   props.projects.current?.scrollIntoView();
                 }}
-                sx={buttonStyle({ color: "yellow" })}
+                sx={buttonStyle({ color: "secondary" })}
               >
                 See my projects
               </Button>
-              <Button onClick={handleOpen} sx={buttonStyle({ color: "blue" })}>
+              <Button
+                onClick={handleOpen}
+                sx={buttonStyle({ color: "primary" })}
+              >
                 Contact me
               </Button>
             </Stack>

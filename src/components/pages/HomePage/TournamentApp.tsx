@@ -1,4 +1,7 @@
-import React, { type RefObject } from "react";
+import { RefObject } from "react";
+import { Box, Button, Link, Stack, Typography } from "@mui/material";
+import { buttonStyle } from "../../../styles";
+import TournamentAppImage from "../../../images/tournament-app.png";
 
 const TournamentApp = (props: {
   previous: RefObject<HTMLDivElement>;
@@ -6,13 +9,13 @@ const TournamentApp = (props: {
   next: RefObject<HTMLDivElement>;
 }) => {
   return (
-    <div>
-      <div ref={props.current} className="page bg-blue">
-        <div>
-          <div className="project">
-            <div className="project-info">
-              <h3>Tournament App</h3>
-              <p>
+    <Box>
+      <Box ref={props.current} className="page bg-blue">
+        <Box>
+          <Box className="project">
+            <Box className="project-info">
+              <Typography>Tournament App</Typography>
+              <Typography>
                 The product was developed in React using <strong>Redux</strong>,
                 React Hooks, Bootstrap. System can add as many teams as needed,
                 initially should start with none. After adding a new team it is
@@ -20,38 +23,46 @@ const TournamentApp = (props: {
                 other teams (all teams play one game with others). For a win,
                 team gets 3 points, draw - 1, lost - 0. Table is ordered
                 according to total points. See the{" "}
-                <a href="https://github.com/yrshva/tournament">
+                <Link href="https://github.com/yrshva/tournament">
                   source code on GitHub
-                </a>{" "}
-                or try <a href="https://sport-tournament.netlify.app/">demo</a>{" "}
+                </Link>{" "}
+                or try{" "}
+                <Link href="https://sport-tournament.netlify.app/">demo</Link>{" "}
                 to see how it works.
-              </p>
-            </div>
+              </Typography>
+            </Box>
             <img
-              src={require("../../../images/tournament-app.png")}
+              src={TournamentAppImage}
               alt="tournament application screenshot"
               className="project-screenshot"
             />
-          </div>
-          <div className="mt-3">
-            <button
-              className="btn-custom btn-blue m-2"
-              onClick={() => { props.previous.current?.scrollIntoView(); }
-              }
+          </Box>
+          <Stack
+            margin={3}
+            direction="row"
+            display="flex"
+            justifyContent="space-evenly"
+          >
+            <Button
+              sx={buttonStyle({ color: "secondary" })}
+              onClick={() => {
+                props.previous.current?.scrollIntoView();
+              }}
             >
               Previous
-            </button>
-            <button
-              className="btn-custom btn-yellow m-2"
-              onClick={() => { props.next.current?.scrollIntoView(); }
-              }
+            </Button>
+            <Button
+              sx={buttonStyle({ color: "primary" })}
+              onClick={() => {
+                props.next.current?.scrollIntoView();
+              }}
             >
               Next
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Button>
+          </Stack>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 export default TournamentApp;

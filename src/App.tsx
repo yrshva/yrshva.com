@@ -14,7 +14,7 @@ function App() {
   const customTheme = createTheme({
     palette: {
       primary: {
-        main: colors.primary.main,
+        main: colors.main.lighter,
       },
     },
     typography: {
@@ -32,6 +32,11 @@ function App() {
         "Helvetica Neue",
         "sans-serif",
       ].join(","),
+    },
+    transitions: {
+      easing: {
+        easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
+      },
     },
   });
   return (

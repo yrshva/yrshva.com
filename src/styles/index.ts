@@ -1,3 +1,5 @@
+import { darken } from "@mui/material";
+
 export const colors = {
   primary: {
     main: "#5AA7FF",
@@ -44,28 +46,33 @@ export const fontSizes = {
   XL: 24,
   XXL: 32,
 };
+
 export const buttonStyle = ({
   color,
   variant,
 }: {
-  color?: string;
-  variant?: string;
+  color?: "primary" | "secondary";
+  variant?: "outline" | "fill";
 }) => {
   const border =
-    color === "blue" ? colors.primary.dark : colors.secondary.x_dark;
+    color === "secondary" ? colors.secondary.x_dark : colors.primary.dark;
   const bg =
     variant === "outline"
       ? undefined
-      : color === "blue"
+      : color === "primary"
       ? colors.primary.x_dark
       : colors.secondary.dark;
+
   return {
     "border-radius": "10px",
     width: "150px",
     height: "55px",
     border: `4px double ${border}`,
-    transition: "0.3s",
+    transition: "0.4s",
     color: colors.main.lighter,
     "background-color": bg,
+    "&:hover": {
+      "background-color": darken(bg ?? border, 0.08),
+    },
   };
 };

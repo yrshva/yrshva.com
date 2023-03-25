@@ -25,10 +25,6 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.html$/i,
-                loader: "html-loader",
-            },
-            {
                 test: /\.(scss)$/,
                 use: [{
                     loader: 'style-loader', // inject CSS to page
@@ -51,12 +47,70 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
-            }, {
-                test: /\.(mp4|png|jpe?g|gif)$/i,
-                loader: 'file-loader',
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
                 options: {
-                    name: '[path][name].[ext]',
-                },
+                    sources: {
+                        list: [
+                            // All default supported tags and attributes
+                            "...",
+                            {
+                                tag: "img",
+                                attribute: "data-src",
+                                type: "src",
+                            },
+                            {
+                                tag: "img",
+                                attribute: "data-srcset",
+                                type: "srcset",
+                            },
+                            {
+                                // Tag name
+                                tag: "link",
+                                // Attribute name
+                                attribute: "href",
+                                // Type of processing, can be `src` or `scrset`
+                                type: "src",
+                                // Allow to filter some attributes
+                                filter: (tag, attribute, attributes, resourcePath) => {
+                                    // The `tag` argument contains a name of the HTML tag.
+                                    // The `attribute` argument contains a name of the HTML attribute.
+                                    // The `attributes` argument contains all attributes of the tag.
+                                    // The `resourcePath` argument contains a path to the loaded HTML file.
+
+                                    if (/my-html\.html$/.test(resourcePath)) {
+                                        return false;
+                                    }
+
+                                    if (!/stylesheet/i.test(attributes.rel)) {
+                                        return false;
+                                    }
+
+                                    if (
+                                        attributes.type &&
+                                        attributes.type.trim().toLowerCase() !== "text/css"
+                                    ) {
+                                        return false;
+                                    }
+
+                                    return true;
+                                },
+                            },
+                        ],
+                    },
+                }
+            },
+            {
+                test: /\.(mp4|png|jpe?g|gif)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]',
+                    },
+                }, { loader: 'url-loader' }]
+
             },
         ]
     },

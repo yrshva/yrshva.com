@@ -1,6 +1,7 @@
-import { Box } from "@mui/material";
-import React, { type RefObject } from "react";
-
+import { Box, Button, Link, Typography } from "@mui/material";
+import { type RefObject } from "react";
+import { buttonStyle } from "../../../styles";
+import WeatherAppImage from "../../../images/weather-app.png";
 const WeatherApp = (props: {
   current: RefObject<HTMLDivElement>;
   next: RefObject<HTMLDivElement>;
@@ -11,35 +12,36 @@ const WeatherApp = (props: {
         <Box>
           <Box className="project">
             <Box className="project-info">
-              <h3>Weather Application</h3>
-              <p>
+              <Typography>Weather Application</Typography>
+              <Typography>
                 The designed product shows real-time weather forecast in over
                 200,000 cities. The Weather Application was developed in React
                 using REST API, React Hooks, Bootstrap. See the{" "}
-                <a href="https://github.com/yrshva/weather-forecast-app-with-select">
+                <Link href="https://github.com/yrshva/weather-forecast-app-with-select">
                   source code on GitHub
-                </a>{" "}
+                </Link>{" "}
                 or try{" "}
-                <a href="https://weather-forecast-all-cities.netlify.app/">
+                <Link href="https://weather-forecast-all-cities.netlify.app/">
                   demo
-                </a>{" "}
+                </Link>{" "}
                 to see how it works.
-              </p>
+              </Typography>
             </Box>
             <img
-              src={require("../../../images/weather-app.png")}
+              src={WeatherAppImage}
               alt="weather application screenshot"
               className="project-screenshot"
             />
           </Box>
           <Box className="mt-3">
-            <button
-              className="btn-custom btn-blue"
-              onClick={() => { props.next.current?.scrollIntoView(); }
-              }
+            <Button
+              sx={buttonStyle({ color: "primary" })}
+              onClick={() => {
+                props.next.current?.scrollIntoView();
+              }}
             >
               Next
-            </button>
+            </Button>
           </Box>
         </Box>
       </Box>

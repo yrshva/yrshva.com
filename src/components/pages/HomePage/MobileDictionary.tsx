@@ -1,4 +1,7 @@
-import React, { type RefObject } from "react";
+import { RefObject } from "react";
+import { Box, Button, Link, Stack, Typography } from "@mui/material";
+import { buttonStyle } from "../../../styles";
+import MobileDictionaryVideo from "../../../images/mobile-dictionary.mp4";
 
 const MobileDictionary = (props: {
   previous: RefObject<HTMLDivElement>;
@@ -6,50 +9,54 @@ const MobileDictionary = (props: {
   next: RefObject<HTMLDivElement>;
 }) => {
   return (
-    <div>
-      <div ref={props.current} className="page bg-yellow">
-        <div>
-          <div className="project">
-            <div className="project-info">
-              <h3>Dictionary Application for iOS/Android</h3>
-              <p>
+    <Box>
+      <Box ref={props.current} className="page bg-yellow">
+        <Box>
+          <Box className="project">
+            <Box className="project-info">
+              <Typography>Dictionary Application for iOS/Android</Typography>
+              <Typography>
                 Dictionary application with some new features like different
                 accents`` pronunciation. Developed in React Native using
                 Typescript, REST API, React Hooks and Audio player library. See
                 the{" "}
-                <a href="https://github.com/yrshva/react-native-dictionary-app">
+                <Link href="https://github.com/yrshva/react-native-dictionary-app">
                   source code on GitHub
-                </a>
+                </Link>
                 .
-              </p>
-            </div>
+              </Typography>
+            </Box>
             <video className="dictionary-video" controls muted>
-              <source
-                src={require("../../../images/mobile-dictionary.mp4")}
-                type="video/mp4"
-              />
+              <source src={MobileDictionaryVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          </div>
-          <div className="mt-3">
-            <button
-              className="btn-custom btn-yellow m-2"
-              onClick={() => { props.previous.current?.scrollIntoView(); }
-              }
+          </Box>
+          <Stack
+            margin={3}
+            direction="row"
+            display="flex"
+            justifyContent="space-evenly"
+          >
+            <Button
+              sx={buttonStyle({ color: "secondary" })}
+              onClick={() => {
+                props.previous.current?.scrollIntoView();
+              }}
             >
               Previous
-            </button>
-            <button
-              className="btn-custom btn-blue m-2"
-              onClick={() => { props.next.current?.scrollIntoView(); }
-              }
+            </Button>
+            <Button
+              sx={buttonStyle({ color: "primary" })}
+              onClick={() => {
+                props.next.current?.scrollIntoView();
+              }}
             >
               Next
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Button>
+          </Stack>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 export default MobileDictionary;
