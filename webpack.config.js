@@ -54,8 +54,6 @@ module.exports = {
                 options: {
                     sources: {
                         list: [
-                            // All default supported tags and attributes
-                            "...",
                             {
                                 tag: "img",
                                 attribute: "data-src",
@@ -67,49 +65,17 @@ module.exports = {
                                 type: "srcset",
                             },
                             {
-                                // Tag name
                                 tag: "link",
-                                // Attribute name
                                 attribute: "href",
-                                // Type of processing, can be `src` or `scrset`
                                 type: "src",
-                                // Allow to filter some attributes
-                                filter: (tag, attribute, attributes, resourcePath) => {
-                                    // The `tag` argument contains a name of the HTML tag.
-                                    // The `attribute` argument contains a name of the HTML attribute.
-                                    // The `attributes` argument contains all attributes of the tag.
-                                    // The `resourcePath` argument contains a path to the loaded HTML file.
-
-                                    if (/my-html\.html$/.test(resourcePath)) {
-                                        return false;
-                                    }
-
-                                    if (!/stylesheet/i.test(attributes.rel)) {
-                                        return false;
-                                    }
-
-                                    if (
-                                        attributes.type &&
-                                        attributes.type.trim().toLowerCase() !== "text/css"
-                                    ) {
-                                        return false;
-                                    }
-
-                                    return true;
-                                },
-                            },
+                            }
                         ],
                     },
                 }
             },
             {
                 test: /\.(mp4|png|jpe?g|gif)$/i,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: '[path][name].[ext]',
-                    },
-                }, { loader: 'url-loader' }]
+                use: [{ loader: 'url-loader' }]
 
             },
         ]
