@@ -2085,7 +2085,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/icons-material@npm:^5.10.6":
+"@mui/icons-material@npm:^5.11.11":
   version: 5.11.11
   resolution: "@mui/icons-material@npm:5.11.11"
   dependencies:
@@ -18898,7 +18898,7 @@ eslint-plugin-react@latest:
     "@emailjs/browser": ^3.7.0
     "@emotion/react": ^11.10.6
     "@emotion/styled": ^11.10.6
-    "@mui/icons-material": ^5.10.6
+    "@mui/icons-material": ^5.11.11
     "@mui/material": ^5.11.14
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.4.0

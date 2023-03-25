@@ -1,4 +1,3 @@
-import React from "react";
 import "../../../styles/resume.css";
 
 const Resume = () => {
@@ -36,10 +35,7 @@ const Resume = () => {
         <p className="c2">
           <span className="c15 c22">GitHub: </span>
           <span className="c5">
-            <a
-              className="c10"
-              href="https://github.com/yrshva"
-            >
+            <a className="c10" href="https://github.com/yrshva">
               https://github.com/yrshva
             </a>
           </span>

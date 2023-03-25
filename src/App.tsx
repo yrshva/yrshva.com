@@ -7,17 +7,44 @@ import "./styles/App.css";
 import About from "./components/pages/About";
 import Home from "./components/pages/Home";
 import Layout from "./components/shared/Layout";
+import { ThemeProvider, createTheme } from "@mui/material";
+import { colors } from "./styles";
 
 function App() {
+  const customTheme = createTheme({
+    palette: {
+      primary: {
+        main: colors.primary.main,
+      },
+    },
+    typography: {
+      fontSize: 15,
+      fontFamily: [
+        "-apple -system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "sans-serif",
+      ].join(","),
+    },
+  });
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={customTheme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

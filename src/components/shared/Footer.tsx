@@ -1,36 +1,54 @@
-import React from "react";
-import "../../styles/footer.css";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import { Box, Link, Stack } from "@mui/material";
+import { colors } from "../../styles";
 const Footer = () => {
+  const iconStyles = {
+    color: colors.secondary.main,
+    transition: "0.3s",
+    "&:hover": {
+      color: colors.secondary.light,
+    },
+  };
   return (
-    <footer>
-      <div className=" p-3">
-        <div className="d-flex justify-content-center">
-          <a
-            id="email"
-            href="mailto:anastasia.yershova@yahoo.com"
-            title="Anastasiia's email"
-            style={{ textDecoration: "none", color: "yellow" }}
-          >
-            anastasiia.yershova@yahoo.com
-          </a>
-        </div>
-        <div className="social-networks d-flex justify-content-center">
-          <a
-            href="https://www.linkedin.com/in/anastasiia-yershova/"
-            title="Anastasiia's LinkedIn"
-            target="blank"
-          >
-            <i className="fa-brands fa-linkedin m-3"></i>
-          </a>
-          <a href="https://t.me/yrshva" target="blank" title="Anastasiia's Telegram">
-            <i className="fa-brands fa-telegram m-3"></i>
-          </a>
-          <a href="https://github.com/yrshva" target="blank" title="Anastasiia's Github">
-            <i className="fa-brands fa-github-square m-3"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
+    <Box bgcolor={colors.primary.dark} paddingY="0.5rem">
+      <Stack direction="row" spacing={2} display="flex" justifyContent="center">
+        <Link
+          id="email"
+          href="mailto:anastasia.yershova@yahoo.com"
+          title="Anastasiia's email"
+          sx={iconStyles}
+        >
+          <AlternateEmailIcon />
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/anastasiia-yershova/"
+          title="Anastasiia's LinkedIn"
+          target="blank"
+          sx={iconStyles}
+        >
+          <LinkedInIcon />
+        </Link>
+        <Link
+          href="https://t.me/yrshva"
+          target="blank"
+          title="Anastasiia's Telegram"
+          sx={iconStyles}
+        >
+          <TelegramIcon />
+        </Link>
+        <Link
+          href="https://github.com/yrshva"
+          target="blank"
+          title="Anastasiia's Github"
+          sx={iconStyles}
+        >
+          <GitHubIcon />
+        </Link>
+      </Stack>
+    </Box>
   );
 };
 export default Footer;
