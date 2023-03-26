@@ -21,7 +21,7 @@ const WeatherApp = (props: {
       <Box>
         <Stack
           direction={{ sm: "column", md: "row" }}
-          spacing={{ sm: 2, md: 4 }}
+          justifyContent="space-between"
         >
           <Box sx={desriptionStyles}>
             <Typography fontSize={fontSizes.XL}>Weather Application</Typography>
@@ -55,7 +55,7 @@ const WeatherApp = (props: {
           <Button
             sx={buttonStyle({ color: "primary" })}
             onClick={() => {
-              props.next.current?.scrollIntoView();
+              props.next.current?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Next

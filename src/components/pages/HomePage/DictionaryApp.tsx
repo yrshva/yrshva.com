@@ -50,7 +50,7 @@ const DictionaryApp = (props: {
           <Button
             sx={buttonStyle({ color: "secondary" })}
             onClick={() => {
-              props.previous.current?.scrollIntoView();
+              props.previous.current?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Previous
@@ -58,7 +58,7 @@ const DictionaryApp = (props: {
           <Button
             sx={buttonStyle({ color: "primary" })}
             onClick={() => {
-              props.next.current?.scrollIntoView();
+              props.next.current?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Next

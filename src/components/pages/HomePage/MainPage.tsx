@@ -75,7 +75,9 @@ const MainPage = (props: { projects: RefObject<HTMLDivElement> }) => {
             >
               <Button
                 onClick={() => {
-                  props.projects.current?.scrollIntoView();
+                  props.projects.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
                 }}
                 sx={buttonStyle({ color: "secondary" })}
               >

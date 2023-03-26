@@ -45,7 +45,7 @@ const CollectionServices = (props: {
           <Button
             sx={buttonStyle({ color: "secondary" })}
             onClick={() => {
-              props.previous.current?.scrollIntoView();
+              props.previous.current?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Previous
