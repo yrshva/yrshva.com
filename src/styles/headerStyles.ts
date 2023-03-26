@@ -21,6 +21,7 @@ export const burgerWrapStyles: CSSProperties = {
   padding: "0 10px",
   lineHeight: "60px",
   backgroundColor: colors.primary.dark,
+  fontFamily: mainFontFamily,
 };
 export const burgerIconStyles: CSSProperties = {
   lineHeight: "normal",
