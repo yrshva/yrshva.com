@@ -30,12 +30,14 @@ const TournamentApp = (props: {
               teams (all teams play one game with others). For a win, team gets
               3 points, draw - 1, lost - 0. Table is ordered according to total
               points. See the{" "}
-              <Link href="https://github.com/yrshva/tournament">
+              <Link target="blank" href="https://github.com/yrshva/tournament">
                 source code on GitHub
               </Link>{" "}
               or try{" "}
-              <Link href="https://sport-tournament.netlify.app/">demo</Link> to
-              see how it works.
+              <Link target="blank" href="https://sport-tournament.netlify.app/">
+                demo
+              </Link>{" "}
+              to see how it works.
             </Typography>
           </Box>
           <img

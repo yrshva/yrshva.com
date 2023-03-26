@@ -25,7 +25,10 @@ const CollectionServices = (props: {
             <Typography>
               The product was designed in Figma and developed in React +
               Typescript using Bootstrap. For portfolio use only. See it on{" "}
-              <Link href="https://www.behance.net/gallery/150263943/German-collection-services/modules/848921161">
+              <Link
+                target="blank"
+                href="https://www.behance.net/gallery/150263943/German-collection-services/modules/848921161"
+              >
                 Behance
               </Link>
               .

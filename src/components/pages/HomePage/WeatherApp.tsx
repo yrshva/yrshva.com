@@ -29,11 +29,17 @@ const WeatherApp = (props: {
               The designed product shows real-time weather forecast in over
               200,000 cities. The Weather Application was developed in React
               using REST API, React Hooks, Bootstrap. See the{" "}
-              <Link href="https://github.com/yrshva/weather-forecast-app-with-select">
+              <Link
+                target="blank"
+                href="https://github.com/yrshva/weather-forecast-app-with-select"
+              >
                 source code on GitHub
               </Link>{" "}
               or try{" "}
-              <Link href="https://weather-forecast-all-cities.netlify.app/">
+              <Link
+                target="blank"
+                href="https://weather-forecast-all-cities.netlify.app/"
+              >
                 demo
               </Link>{" "}
               to see how it works.

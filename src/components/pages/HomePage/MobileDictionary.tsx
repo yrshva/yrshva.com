@@ -32,7 +32,10 @@ const MobileDictionary = (props: {
               accents`` pronunciation. Developed in React Native using
               Typescript, REST API, React Hooks and Audio player library. See
               the{" "}
-              <Link href="https://github.com/yrshva/react-native-dictionary-app">
+              <Link
+                target="blank"
+                href="https://github.com/yrshva/react-native-dictionary-app"
+              >
                 source code on GitHub
               </Link>
               .

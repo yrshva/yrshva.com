@@ -28,10 +28,16 @@ const DictionaryApp = (props: {
               You can search for any word`s definition and listen to the word`s
               pronuncuation with the Dictionary Application. This product was
               developed in React using REST API, React Hooks, Bootstrap. See the{" "}
-              <Link href="https://github.com/yrshva/dictionary-app">
+              <Link
+                target="blank"
+                href="https://github.com/yrshva/dictionary-app"
+              >
                 source code on GitHub
               </Link>{" "}
-              or try <Link href="https://wordbook-app.netlify.app/">demo</Link>{" "}
+              or try{" "}
+              <Link target="blank" href="https://wordbook-app.netlify.app/">
+                demo
+              </Link>{" "}
               to see how it works.
             </Typography>
           </Box>
