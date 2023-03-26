@@ -1,7 +1,8 @@
 import { CSSProperties } from "react";
+import { mainFontFamily, colors } from ".";
 
-export const linkStyles: CSSProperties = {
-  color: "rgb(54, 54, 54)",
+export const linkStyles = {
+  color: colors.main.lighter,
   transition: "0.3s",
   textDecoration: "none",
   margin: "0 10px",
@@ -13,12 +14,13 @@ export const fullHeaderStyles: CSSProperties = {
   width: "100%",
   padding: "0 10px",
   lineHeight: "60px",
+  fontFamily: mainFontFamily,
 };
 export const burgerWrapStyles: CSSProperties = {
   width: "100%",
   padding: "0 10px",
   lineHeight: "60px",
-  backgroundColor: "#479dff",
+  backgroundColor: colors.primary.dark,
 };
 export const burgerIconStyles: CSSProperties = {
   lineHeight: "normal",

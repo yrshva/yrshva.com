@@ -45,6 +45,7 @@ export const fontSizes = {
   L: 18,
   XL: 24,
   XXL: 32,
+  XXXL: 60,
 };
 
 export const buttonStyle = ({

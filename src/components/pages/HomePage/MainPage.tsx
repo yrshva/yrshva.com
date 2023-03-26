@@ -14,6 +14,7 @@ import {
   fontSizes,
   buttonStyle,
   colors,
+  mainFontFamily,
 } from "../../../styles";
 import { containerStyles } from "../../../styles/projectStyles";
 
@@ -30,6 +31,9 @@ const SlideInRight = styled.span`
 const Name = styled.h2`
   color: ${colors.secondary.light};
   font-weight: 700;
+  margin: 0;
+  font-family: ${mainFontFamily};
+  font-size: ${fontSizes.XXXL}px;
   animation: 1s ${keyframes`${zoomIn}`};
 `;
 
