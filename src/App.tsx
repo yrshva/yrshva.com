@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import About from "./components/pages/About";
 import Home from "./components/pages/Home";
+import ProjectsPage from "./components/pages/ProjectsPage";
 import Layout from "./components/shared/Layout";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { colors } from "./styles";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
+            <Route path="projects" element={<ProjectsPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

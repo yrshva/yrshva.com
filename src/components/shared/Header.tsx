@@ -77,6 +77,13 @@ const Header = () => {
                 >
                   <ListItemText primary="About" />
                 </ListItemButton>
+                <ListItemButton
+                  onClick={() => {
+                    navigate("/projects");
+                  }}
+                >
+                  <ListItemText primary="Projects" />
+                </ListItemButton>
               </List>
             </Box>
           )}
@@ -95,6 +102,9 @@ const Header = () => {
               </Link>
               <Link to="/about" style={linkStyles}>
                 About
+              </Link>
+              <Link to="/projects" style={linkStyles}>
+                Projects
               </Link>
               <HashLink to="/about#contact" style={linkStyles}>
                 Contact
