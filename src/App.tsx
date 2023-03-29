@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import About from "./components/pages/About";
 import Home from "./components/pages/Home";
@@ -43,7 +43,18 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
-            <Route path="projects" element={<ProjectsPage />} />
+            <Route
+              path="projects/weatherApp"
+              element={<ProjectsPage projectName="weatherApp" />}
+            />
+            <Route
+              path="projects/dictionaryApp"
+              element={<ProjectsPage projectName="dictionaryApp" />}
+            />
+            <Route
+              path="projects/*"
+              element={<Navigate to="/projects/weatherApp" />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>

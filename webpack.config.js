@@ -8,10 +8,12 @@ module.exports = {
     devtool: 'inline-source-map',
     output: {
         path: path.join(__dirname, '/dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/',
     },
     devServer: {
         static: './dist',
+        historyApiFallback: true,
         open: true,
     },
     module: {
@@ -85,6 +87,7 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
+
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html'

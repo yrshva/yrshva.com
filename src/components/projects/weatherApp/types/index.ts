@@ -25,3 +25,4 @@ export interface weatherDataProps {
   };
 }
 export type units = "imperial" | "metric";
+export type projectNames = "weatherApp" | "dictionaryApp";
