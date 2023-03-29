@@ -1,9 +1,9 @@
 import { Box, Tabs, Tab } from "@mui/material";
-import { WeatherApp } from "../../projects/weatherApp";
-import { colors } from "../../../styles";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { projectNames } from "../../projects/weatherApp/types";
+import { colors } from "../../../styles";
+import { projectNames } from "../../../types";
+import { WeatherApp } from "../../projects/WeatherApp";
 
 interface LinkTabProps {
   label: string;
